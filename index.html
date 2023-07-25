@@ -1,0 +1,80 @@
+<html>
+    <head>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/all.min.css">
+		<link rel="stylesheet" href="css/style_index.css">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+		
+		<h1 class="text-primary text-center my-4">CRUD</h1>
+		
+		<div class="container py-5">
+			
+			<div class="form-group">
+				<label for="pName" class="">product Name :</label>
+				<input class="my-1 form-control text-info" type="text" id="pName">
+
+				<!--2-->
+				<div id="userNameAlert" class="d-none alert alert-danger text-center w-75 m-auto">
+					<h5>User Name Must Start UppeCase And Then From 1 To Plas</h5>
+				</div>
+				
+			</div>
+		
+			<div class="form-group">
+				<label for="pPrice" class="">product Price :</label>
+				<input class="form-control text-info" type="number" id="pPrice">
+			</div>
+			
+			<!--///////////////////////////////////-->
+			<div class="form-group">
+				<label for="pCategory" class="">product Category :</label>
+				<input class="form-control text-info" type="text" id="pCategory">
+			</div>
+			
+			<div id="CategorAlert" class="d-none alert alert-danger text-center w-75 m-auto">
+				<h5>User Name Must Start UppeCase And Then From 1 To Plas</h5>
+			</div>
+				
+			<!--///////////////////////////////////-->
+			<div class="form-group">
+				<label for="pDesc" class="">product Description :</label>
+				<textarea class="form-control text-info" type="text" id="pDesc"></textarea>
+			</div>
+			
+			<button id="mainBtn" onclick="addProduct()" class=" addUpdate btn btn-outline-primary w-100 p-3">Add Product</button>
+			<button onclick="updateNow()" class="buttonUpdate addUpdate btn btn-outline-success w-100 p-3 d-none">Add Update</button>
+
+		</div>
+
+		<div class="container">
+			<input placeholder="search product" onkeyup="pSearch(this.value)" class="form-control w-50 m-auto" type="text">
+		</div>
+
+		<div class="container">
+			<table class="table mt-5">
+				<thead>
+					<th>index</th>
+					<th>productName</th>
+					<th>productPrice</th>
+					<th>productCategory</th>
+					<th>productDesc</th>
+					<th>update</th>
+					<th>delete</th>
+				</thead>
+			
+				<tbody id="tBody"><!--js ده اللي هضافه في--> 
+					
+				</tbody>
+			
+			</table>
+		</div>
+		
+		<script src="js/jquery-3.5.1.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		
+		<script src="js/index.js"></script>
+	</body>
+</html>
